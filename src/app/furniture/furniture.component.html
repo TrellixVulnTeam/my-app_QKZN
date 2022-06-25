@@ -1,0 +1,19 @@
+<div class="content" role="main">
+    <div class="card">
+      <div class="form-group">
+        <label for="search-text">Search Text</label>
+        <input type="email" class="form-control" id="search-text" aria-describedby="search-text" [(ngModel)]="searchText" placeholder="Enter text to search" 
+          autofocus>
+      </div>
+    </div>
+  </div>
+<div class="Container">
+    <a class="ItemCard" href="description/{{furniture.id}}" *ngFor="let furniture of furnitures | appFilter: searchText">
+        <img src="{{furniture.image}}" alt="">
+        <div class="Description">
+            <p class="ItemName">{{furniture.name}}</p>
+            <p class="ItemDescription">{{furniture.description}}</p>
+            <p class="ItemPrice">{{furniture.price}}.-</p>
+        </div>
+    </a>
+</div>

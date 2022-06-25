@@ -1,0 +1,34 @@
+a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+}
+.Container{
+    float: right;
+    width: 85%;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    justify-content: space-between;
+    margin-right: 3%;
+}
+.Description{
+    display: grid;
+}
+.Description>p{
+    margin-top: 0px;
+    margin-bottom: 2px;
+}
+.ItemCard>img{
+    width: 100%;
+}
+.ItemName{
+    font-size: 16px;
+    font-weight: 600;
+}
+.ItemName:hover{
+    text-decoration: underline;
+}
+.ItemPrice{
+    font-weight: 700;
+    font-size: 25px;
+}
