@@ -4,8 +4,8 @@ import { FurnitureComponent } from './furniture/furniture.component';
 import { FurnitureDescriptionComponent } from './furniture-description/furniture-description.component';
 
 const routes: Routes = [
-  { path: 'Start', component: FurnitureComponent },
-  { path: '', redirectTo: '/Start', pathMatch: 'full' },
+  { path: 'CostumerView', component: FurnitureComponent },
+  { path: '', redirectTo: '/CostumerView', pathMatch: 'full' },
   { path: 'description/:id',component: FurnitureDescriptionComponent}
 ];
 

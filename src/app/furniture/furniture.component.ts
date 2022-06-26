@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FurnitureService } from '../furniture.service';
 import { Furniture } from '../Furniture';
-import { SearchBarComponent } from '../search-bar/search-bar.component';
 
 @Component({
   selector: 'app-furniture',
