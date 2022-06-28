@@ -1,0 +1,21 @@
+<table matSort (matSortChange)="sortData($event)">
+    <tr>
+      <th>Image</th>
+      <th mat-sort-header="name">Name</th>
+      <th>Description</th>
+      <th mat-sort-header="price">Price</th>
+      <th mat-sort-header="id">ID</th>
+    </tr>
+  
+    <tr *ngFor="let furniture of furnitures">
+      <td>{{furniture.image}}</td>
+      <td>{{furniture.name}}</td>
+      <td>{{furniture.description}}</td>
+      <td>{{furniture.price}}</td>
+      <td>{{furniture.id}}</td>
+    </tr>
+  </table>
+
+  <button (click)="newFurniture()"></button>
+  
+  

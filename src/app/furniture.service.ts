@@ -8,6 +8,7 @@ import { Observable, of } from 'rxjs';
 })
 export class FurnitureService {
 
+
   getFurnitures(): Observable<Furniture[]> {
     const furnitures = of(FURNITURE);
     return furnitures;
@@ -16,5 +17,13 @@ export class FurnitureService {
     const furniture = FURNITURE.find(h=>h.id===id)!;
     return of(furniture);
   }
+
+  addFurniture(furn:Furniture){
+
+    console.log("Pushing Furniture");
+    FURNITURE.push(furn);
+    console.log(FURNITURE);
+  }
+
   constructor() { }
 }

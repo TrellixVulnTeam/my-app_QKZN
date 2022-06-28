@@ -2,24 +2,41 @@ import { Component, OnInit } from '@angular/core';
 import { FurnitureService } from '../furniture.service';
 import { Furniture } from '../Furniture';
 import { Sort } from '@angular/material/sort';
+
 @Component({
-  selector: 'app-furniture',
-  templateUrl: './furniture.component.html',
-  styleUrls: ['./furniture.component.css']
+  selector: 'app-admin-view',
+  templateUrl: './admin-view.component.html',
+  styleUrls: ['./admin-view.component.css']
 })
-export class FurnitureComponent implements OnInit {
+export class AdminViewComponent implements OnInit {
+  
   furnitures: Furniture[] = [];
 
-  constructor(private furnitureService: FurnitureService) { }
+  constructor(private furnitureService: FurnitureService) {}
   searchText = '';
+
   getFurniture(): void{
     this.furnitureService.getFurnitures().subscribe(furnitures => this.furnitures = furnitures);
   }
-
   ngOnInit(): void {
     this.getFurniture();
   }
+  newFurnitureObj: Furniture = {id:1000,price:200,name:"Ingen",description:"Ingen",image:"None"};
+
+  newFurniture(): void{
+    this.newFurnitureObj.id=this.furnitures.length+1;
+    this.newFurnitureObj.name="Ingen";
+    this.newFurnitureObj.price=0;
+    this.newFurnitureObj.image="https://user-images.githubusercontent.com/43302778/106805462-7a908400-6645-11eb-958f-cd72b74a17b3.jpg";
+    this.newFurnitureObj.description="Ingen";
+    console.log("Clicked");
+    this.furnitureService.addFurniture(this.newFurnitureObj);
+    this.getFurniture();
+    this.sortData({active: 'id', direction: 'asc'});
+  }
+
   sortData(sort: Sort) {
+    console.log(sort);
     const data = this.furnitures.slice();
     if (!sort.active || sort.direction === '') {
       this.furnitures = data;

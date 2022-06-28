@@ -13,6 +13,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FilterPipe } from './filter.pipe';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
+import {MatSortModule} from '@angular/material/sort';
+import { AdminViewComponent } from './admin-view/admin-view.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { HeaderComponent } from './header/header.component';
     FurnitureComponent,
     FurnitureDescriptionComponent,
     FilterPipe,
-    HeaderComponent 
+    HeaderComponent,
+    AdminViewComponent 
     ],
   imports: [
     BrowserModule,
@@ -30,7 +33,8 @@ import { HeaderComponent } from './header/header.component';
     MatInputModule,
     MatAutocompleteModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]
