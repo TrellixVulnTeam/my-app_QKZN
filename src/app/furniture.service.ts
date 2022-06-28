@@ -19,7 +19,6 @@ export class FurnitureService {
   }
 
   addFurniture(furn:Furniture){
-
     console.log("Pushing Furniture");
     FURNITURE.push(furn);
     console.log(FURNITURE);

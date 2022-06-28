@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import {MatSortModule} from '@angular/material/sort';
 import { AdminViewComponent } from './admin-view/admin-view.component';
+import { AdminEdtComponent } from './admin-edt/admin-edt.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { AdminViewComponent } from './admin-view/admin-view.component';
     FurnitureDescriptionComponent,
     FilterPipe,
     HeaderComponent,
-    AdminViewComponent 
+    AdminViewComponent,
+    AdminEdtComponent 
     ],
   imports: [
     BrowserModule,
