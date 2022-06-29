@@ -32,7 +32,6 @@ export class AdminViewComponent implements OnInit {
   }
 
   sortData(sort: Sort) {
-    console.log(sort);
     const data = this.furnitures.slice();
     if (!sort.active || sort.direction === '') {
       this.furnitures = data;
