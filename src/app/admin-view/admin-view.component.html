@@ -1,21 +1,20 @@
 <div class="form-group">
-  <label for="search-text">Search Text</label>
-  <input type="email" class="form-control" id="search-text" aria-describedby="search-text" [(ngModel)]="searchText" placeholder="Enter text to search" 
+    <input type="email" class="form-control" id="search-text" aria-describedby="search-text" [(ngModel)]="searchText" placeholder="Search" 
     autofocus>
 </div>
   <table>
     <tr>
       <th>Image</th>
-      <th><a (click)="sortData({active: 'name', direction: 'asc'})">Name</a></th>
+      <th><a (click)="sortData({active: 'name', direction: 'asc'})" class="clickable">Name</a></th>
       <th>Description</th>
-      <th><a (click)="sortData({active: 'price', direction: 'asc'})">Price</a></th>
-      <th><a (click)="sortData({active: 'id', direction: 'asc'})">Id</a></th>
+      <th><a (click)="sortData({active: 'price', direction: 'asc'})" class="clickable">Price</a></th>
+      <th><a (click)="sortData({active: 'id', direction: 'asc'})" class="clickable">Id</a></th>
       <th>Edit</th>
       <th>Delete</th>
     </tr>
 
     <tr *ngFor="let furniture of furnitures | appFilter: searchText">
-      <td>{{furniture.image}}</td>
+      <td><img src="{{furniture.image}}" alt="" width="50px" style="max-height:50px"></td>
       <td>{{furniture.name}}</td>
       <td>{{furniture.description}}</td>
       <td>{{furniture.price}}</td>

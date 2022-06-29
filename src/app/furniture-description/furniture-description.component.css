@@ -1,0 +1,15 @@
+
+
+.FurnitureBox>img{
+    width: 33%;
+    margin-inline: auto;
+}
+.DescriptionBox{
+width: 50%;
+margin-top: 50px;
+}
+
+.DescriptionBox>.price{
+    font-weight: 700;
+    font-size: 25px;
+}

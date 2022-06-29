@@ -1,0 +1,40 @@
+.clickable{
+    cursor: pointer;
+    text-decoration: underline;
+
+    
+}
+
+table{
+    width: 100%;
+}
+
+tr{
+    width: 100%;
+}
+
+tr>td{
+    width: 14%;
+    justify-content: center;
+    margin-inline: auto;
+    text-align: center;
+}
+
+.form-group{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.form-group>input{
+    outline: 0;
+    width: 80%;
+    height: 50px;
+    background-color: rgb(235, 233, 233);
+    border: 0px;
+    border-radius: 50px;
+    text-align: center;
+}
+.form-group>input:hover{
+    background-color: lightgrey;
+}

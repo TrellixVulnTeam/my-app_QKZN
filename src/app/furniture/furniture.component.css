@@ -32,3 +32,22 @@ a{
     font-weight: 700;
     font-size: 25px;
 }
+
+.form-group{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.form-group>input{
+    outline: 0;
+    width: 80%;
+    height: 50px;
+    background-color: rgb(235, 233, 233);
+    border: 0px;
+    border-radius: 50px;
+    text-align: center;
+}
+.form-group>input:hover{
+    background-color: lightgrey;
+}
