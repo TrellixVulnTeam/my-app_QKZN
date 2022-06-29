@@ -1,4 +1,23 @@
-<div *ngIf="furniture">
-    <img src="{{furniture.image}}">
-    <h2>{{furniture.name}}</h2>
+<div *ngIf="furniture" style="Display:grid; width:100%; margin-left:auto; justify-content:center; text-align:center;">
+    <img src="{{furniture.image}}" height="400px">
+    <div>
+        <label for="image">Furniture url: </label>
+        <input id="image" [(ngModel)]="furniture.image" placeholder="image">
+    </div>
+    <div>
+        <label for="name">Furniture name: </label>
+        <input id="name" [(ngModel)]="furniture.name" placeholder="name">
+    </div>
+    <div>
+        <label for="description">Furniture description: </label>
+        <input id="description" [(ngModel)]="furniture.description" placeholder="description">
+    </div>
+    <div>
+        <label for="price">Furniture price: </label>
+        <input id="price" [(ngModel)]="furniture.price" placeholder="price">
+    </div>
+    <div>Furniture id: {{furniture.id}}</div>
+    <button type="button" (click)="save()">save</button>
 </div>
+
+<button type="button" (click)="goBack()">go back</button>

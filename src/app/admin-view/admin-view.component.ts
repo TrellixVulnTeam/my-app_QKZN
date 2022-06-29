@@ -21,18 +21,14 @@ export class AdminViewComponent implements OnInit {
   ngOnInit(): void {
     this.getFurniture();
   }
-  newFurnitureObj: Furniture = {id:1000,price:200,name:"Ingen",description:"Ingen",image:"None"};
 
-  newFurniture(): void{
-    this.newFurnitureObj.id=this.furnitures.length+1;
-    this.newFurnitureObj.name="Ingen";
-    this.newFurnitureObj.price=0;
-    this.newFurnitureObj.image="https://user-images.githubusercontent.com/43302778/106805462-7a908400-6645-11eb-958f-cd72b74a17b3.jpg";
-    this.newFurnitureObj.description="Ingen";
-    console.log("Clicked");
-    this.furnitureService.addFurniture(this.newFurnitureObj);
-    this.getFurniture();
-    this.sortData({active: 'id', direction: 'asc'});
+  addFurniture(){
+    this.furnitureService.addNewFurniture(this.furnitures.length+1).subscribe(furniture => this.furnitures.push(furniture));
+  }
+
+  delete(id:number){
+    this.furnitures = this.furnitures.filter(h => h.id!=id);
+    this.furnitureService.deleteFurniture(id).subscribe();
   }
 
   sortData(sort: Sort) {

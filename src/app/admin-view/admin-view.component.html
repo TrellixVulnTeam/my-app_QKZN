@@ -1,23 +1,26 @@
-<table matSort (matSortChange)="sortData($event)">
+  <table>
     <tr>
       <th>Image</th>
-      <th mat-sort-header="name">Name</th>
+      <th>Name</th>
       <th>Description</th>
-      <th mat-sort-header="price">Price</th>
-      <th mat-sort-header="id">ID</th>
+      <th>Price</th>
+      <th>ID</th>
       <th>Edit</th>
     </tr>
-  
+
     <tr *ngFor="let furniture of furnitures">
       <td>{{furniture.image}}</td>
       <td>{{furniture.name}}</td>
       <td>{{furniture.description}}</td>
       <td>{{furniture.price}}</td>
       <td>{{furniture.id}}</td>
-      <td><a href="/AdminEdit/{{furniture.id}}">Edit</a></td>
+      <td><a routerLink="/AdminEdit/{{furniture.id}}">Edit</a></td>
+      <td><button class="Delete" title="delete furniture"
+        (click)="delete(furniture.id)">Delete</button></td>
     </tr>
-  </table>
+</table>
 
-  <button (click)="newFurniture()"></button>
-  
+<button type="button" class="add-button" (click)="addFurniture()">
+  Add furniture
+</button>
   

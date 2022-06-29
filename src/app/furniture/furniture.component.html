@@ -8,16 +8,10 @@
       </div>
     </div>
   </div>
- <table matSort (matSortChange)="sortData($event)">
-    <tr>
-      <th mat-sort-header="name">Name</th>
-      <th mat-sort-header="price">Price</th>
-      <th mat-sort-header="id">ID</th>
-    </tr>
-  </table>
+
 </div>
 <div class="Container">
-    <a class="ItemCard" href="description/{{furniture.id}}" *ngFor="let furniture of furnitures | appFilter: searchText">
+    <a class="ItemCard" routerLink="/description/{{furniture.id}}" *ngFor="let furniture of furnitures | appFilter: searchText">
         <img src="{{furniture.image}}" alt="">
         <div class="Description">
             <p class="ItemName">{{furniture.name}}</p>
