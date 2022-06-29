@@ -38,3 +38,21 @@ tr>td{
 .form-group>input:hover{
     background-color: lightgrey;
 }
+
+.add-button{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(4, 234, 4);
+    border-radius: 50px;
+    border: 1px;
+    font-size: 20px;
+}
+.add-button:hover{
+    background-color: green;
+    cursor: pointer;
+}
+
+.buttoncontainer{
+    display: flex;
+    justify-content: center;
+}
